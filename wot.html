@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=.43"> -->
+<style>
+:root {
+    background-color: antiquewhite;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.containerHeader {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 20px 20vh 20px;
+    /* grid-gap: 1em; */
+}
+.containerBody {
+    display: grid;
+    grid-template-columns: auto 1fr 40%;
+    grid-template-rows: auto 1fr 40px;
+    grid-gap: 1em;
+    background-color: yellow;
+}
+.navWalk {
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+    text-align: center;
+    list-style: none;
+    justify-content: space-evenly;
+    /*see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for information on justify content for nav */
+}
+.heading {
+    grid-column: 1/ span 3;
+    margin: 1px;
+    grid-row: 2;
+    font-size: 3em;
+    text-align: center;
+    background-color: white;
+}
+.tank2Image {
+  grid-column: 1/ span 2;
+  grid-row: 1/ span 1;
+  background-color: white;
+
+}
+.aside {
+  background-color: lightblue;
+  grid-column: 3;
+  grid-row: 1;
+  padding: 2px;
+  margin: 5px;
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+    text-align: center;
+    
+  }
+  
+  
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  .heading {
+    grid-column: 1/ span 3;
+    padding: 0 10%;
+    grid-row: 2;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+  .button {
+  font: bold 15px Arial;
+  text-decoration:None;
+  background-color: rgb(0, 247, 255);
+  color: #fafafa;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+@media only all and (max-width:500px orientation= landscape) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+    text-align: center;
+    
+  }
+  .heading {
+    grid-column: 1/ span 3;
+    padding: 0 10%;
+    grid-row: 2;
+    font-size: 1em;
+    text-align: center;
+}
+}
+</style>
+
+<script src = "picturefill.js" async></script>
+</head>
+<body>
+
+       
+
+<div class = "containerHeader">
+<div class = "heading">
+  Walking the Cat to the Park
+  <!-- <h3>Resize the browser window</h3> -->
+</div>
+</div>
+
+<nav class = "navWalk">
+        <li class="button"><a href="wot.html">The Walk</a></li>
+        <li class="button"><a href="theCat.html">The Cat</a></li>
+        <li class="button"><a href="theWalk.html">The Route</a></li>
+        <li class="button"><a href="gallery.html">Gallery</a></li>
+          
+</nav>
+
+
+<div class = "containerBody">
+  <div class="tank2Image">
+     <img src="tank2.svg" height="500" width="500">
+  </div>
+
+  <div class="aside">
+    <h2>What?</h2>
+    <p>We're a cat walking service that help busy people make sure your panther gets their walk in.</p>
+    <h2>Where?</h2>
+    <p>We will pick up your cat from your home and take the Panzer to the local cat park.</p>
+    <h2>Price?</h2>
+    <p>Our rate is $25/week per cat.</p>
+  </div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
